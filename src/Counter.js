@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react"
 
 function Counter({ initialCount }) {
-  const [count, setCount] = useState(initialCount)
+  const [count, setCount] = useState(() => {
+    // to get inital value only once, especially when there is complex calculation
+    return initialCount
+  })
 
   useEffect(() => {
     document.title = `You clicked ${count} times`

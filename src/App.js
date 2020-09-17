@@ -6,7 +6,7 @@ import Form from "./Form.js"
 function App() {
   return (
     <div className="app">
-      {/* <Form /> */}
+      <Form />
       <Counter initialCount={0} />
     </div>
   )
